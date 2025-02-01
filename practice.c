@@ -1,11 +1,14 @@
 #include<stdio.h>
 
-void addition(int *aA){
-    (*aA)++;
+// pointers using for functions
+void addition(int *aA, int *bB, int *Ssum){
+     *Ssum = *aA + *bB;
 }
 
 int main(){
     int x = 10;
-    addition(&x);
-    printf("the incremented value is: %d\n", *&x);
+    int z = 12;
+    int sum = 0;
+    addition(&x, &z, &sum);
+    printf("the sum of the values are: %d\n", *&sum);
 }
